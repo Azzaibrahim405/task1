@@ -29,38 +29,53 @@ class WhatsAppScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(width: 5),
-              CustomMessage(text: 'This Is My First Message' )
+              CustomMessage(text: 'This Is My First Message')
             ],
           ),
-          Row(children: [
-            SizedBox(width: 15,),
-            CustomMessage(text: 'This Is My Second Message' ),
-            SizedBox(width: 5),
-            Padding(
-              padding: const EdgeInsets.all(18.0),
-              child: CircleAvatar(
-                radius: 25,
-                backgroundImage: AssetImage('assets/images/person2.jpg'),
+          Row(
+            children: [
+              SizedBox(
+                width: 15,
               ),
-            ),
-
-          ],),
-          Spacer(),
-          Row(children: [
-            Expanded(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: CustomTextField(
-                    perfx: Icon(Icons.emoji_emotions_outlined,color: Colors.white,),
-                    sufx: Icon(Icons.attach_file,color: Colors.white,),
-                    hintText: 'Type a Message',
+              CustomMessage(text: 'This Is My Second Message'),
+              SizedBox(width: 5),
+              Padding(
+                padding: const EdgeInsets.all(18.0),
+                child: CircleAvatar(
+                  radius: 25,
+                  backgroundImage: AssetImage('assets/images/person2.jpg'),
                 ),
               ),
-            ),
-            CircleAvatar(
-              radius: 30,backgroundColor: Colors.black,
-                child: Icon(Icons.mic,color: Colors.white,))
-          ],)
+            ],
+          ),
+          Spacer(),
+          Row(
+            children: [
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: CustomTextField(
+                    perfx: Icon(
+                      Icons.emoji_emotions_outlined,
+                      color: Colors.white,
+                    ),
+                    sufx: Icon(
+                      Icons.attach_file,
+                      color: Colors.white,
+                    ),
+                    hintText: 'Type a Message',
+                  ),
+                ),
+              ),
+              CircleAvatar(
+                  radius: 30,
+                  backgroundColor: Colors.black,
+                  child: Icon(
+                    Icons.mic,
+                    color: Colors.white,
+                  ))
+            ],
+          )
         ]),
       ),
     );
